@@ -1,0 +1,172 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "external",
+    //"latex-workshop.view.pdf.external.command": {
+    //    "command": "C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe",
+    //    "args": [
+    //        "%PDF%"
+    //    ]
+    //},
+    //"latex-workshop.view.pdf.external.synctex": {
+    //    "command": "C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe",
+    //    "args": [
+    //        "-forward-search",
+    //        "%TEX%",
+    //        "%LINE%",
+    //        "%PDF%"
+    //    ]
+    //},
+    "python.linting.flake8Args": [
+        "--max-line-length=128"
+    ],
+    "python.pythonPath": "D:\\Drive\\Anaconda\\python.exe",
+    "python.formatting.provider": "yapf",
+    "todohighlight.keywords": [
+        "DEBUG:",
+        "REVIEW:",
+        {
+            "text": "Note:",
+            "color": "white",
+            "backgroundColor": "green",
+            "overviewRulerColor": "green"
+        },
+        {
+            "text": "END:",
+            "color": "white",
+            "backgroundColor": "red",
+            "isWholeLine": false,
+        },
+    ],
+    "python.linting.pydocstyleEnabled": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 19,
+    "editor.formatOnType": true,
+    "editor.snippetSuggestions": "top",
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+    "git.ignoreLimitWarning": true,
+    "git.path": "D:/Drive/Git/bin/git.exe",
+    "latex-workshop.view.pdf.external.viewer.command": "D:/Drive/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "%PDF%"
+    ],
+    "editor.fontLigatures": true,
+    "files.associations": {
+        "vector": "cpp",
+        "ostream": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "*.tcc": "cpp",
+        "cctype": "cpp",
+        "chrono": "cpp",
+        "cinttypes": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "fstream": "cpp",
+        "future": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp",
+        "valarray": "cpp",
+        "variant": "cpp"
+    },
+    "cmake.configureOnOpen": false,
+    "code-runner.runInTerminal": true,
+    "sqltools.connections": [],
+    "sqltools.useNodeRuntime": true // 效果效果比cpptools要好
+}
