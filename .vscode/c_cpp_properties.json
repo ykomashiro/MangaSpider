@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Drive/MinGW/mingw64/bin/",
+                "D:/Drive/opencv3/opencv/build_mingw/install/include",
+                "D:/Drive/opencv3/opencv/build_mingw/install/include/opencv/",
+                "D:/Drive/opencv3/opencv/build_mingw/install/include/opencv2/",
+                "D:/Drive/opencv3/opencv/build_mingw/install/x64/mingw/lib",
+                "D:/resource/torch/libtorch/debug/libtorch/include",
+                "D:/resource/torch/libtorch/debug/libtorch/bin",
+                "D:/resource/torch/libtorch/debug/libtorch/lib"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "D:/Drive/MinGW/mingw64/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
