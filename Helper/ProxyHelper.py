@@ -1,21 +1,16 @@
 import requests
+from lxml import etree
 from bs4 import BeautifulSoup
 
+from Helper.BasicHelper import BasicProxy
 
-class ProxyHelper(object):
+
+class ProxyHelper(BasicProxy):
     def __init__(self):
-        self.verifyUrl = 'http://www.baidu.com'
-        self.headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
-            'Accept': '*/*',
-            'Connection': 'keep-alive',
-            'Accept-Language': 'zh-CN,zh;q=0.8'
-        }
-        self.r = requests.Session()
+        super(ProxyHelper, self).__init__()
 
     def parse(self):
-        response = self.r.get("http://www.data5u.com/",
+        response = requests.get("http://www.data5u.com/",
                               headers=self.headers,
                               timeout=3,
                               verify=False).content
@@ -31,26 +26,18 @@ class ProxyHelper(object):
             "http": "http://{0}".format(proxy),
             "https": "https://{0}".format(proxy)
         }
-        headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
-            'Accept': '*/*',
-            'Connection': 'keep-alive',
-            'Accept-Language': 'zh-CN,zh;q=0.8'
-        }
         try:
             r = requests.head(self.verifyUrl,
-                              headers=headers,
+                              headers=self.headers,
                               proxies=proxies,
                               timeout=3,
                               verify=False)
             if r.status_code == 200:
+                print("{}: success".format(proxy))
                 return True
         except:
             pass
+        print("{}: fail".format(proxy))
         return False
 
 
-if __name__ == "__main__":
-    model = ProxyHelper()
-    model.parse()
