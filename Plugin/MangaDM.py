@@ -39,6 +39,9 @@ class MangaDM(BasicMangaDownload):
         ]
         """
 
+    def download(self):
+        pass
+
     def parse(self, url):
         self.get_chapter_list(url)
         for item in self.chapter2url.items():
